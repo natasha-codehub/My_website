@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Natasha Agarwal — Senior AI Product Manager and AI Product Builder. AI systems, platform trust, and enterprise product leadership.">
+<title>Natasha Agarwal | AI Product Leadership</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --pink: light-dark(#f6dce6, #38242e);
+  --pink-soft: light-dark(#fff3f7, #281d24);
+  --rose: light-dark(#a33d65, #f0a8c5);
+  --rose-deep: light-dark(#762344, #ffd2e3);
+  --ink: light-dark(#2b1c24, #fff2f7);
+  --muted: light-dark(#715b65, #d3b9c5);
+  --paper: light-dark(#fffdfd, #20191e);
+  --line: light-dark(#e7c9d5, #59404b);
+  --accent: light-dark(#f2c3d4, #543345);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--pink-soft); color: var(--ink); line-height: 1.6; }
+#app { width: 100%; min-height: 100vh; border-radius: 0; background: var(--pink-soft); }
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--rose); outline-offset: 4px; }
+.nav-wrap { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--pink-soft) 91%, transparent); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+nav { max-width: 1160px; margin: auto; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { font-size: .86rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.brand span { color: var(--rose); }
+.nav-links { display: flex; align-items: center; gap: 22px; font-size: .84rem; color: var(--muted); }
+.nav-links a:hover { color: var(--rose-deep); }
+.nav-cta { border: 1px solid var(--rose); border-radius: 999px; padding: 8px 14px; color: var(--rose-deep); font-weight: 700; }
+main { overflow: hidden; }
+.hero { position: relative; background: var(--pink); padding: 88px 28px 82px; }
+.hero::after { content: ""; position: absolute; width: 390px; height: 390px; border-radius: 50%; right: -105px; top: -125px; border: 1px solid color-mix(in srgb, var(--rose) 30%, transparent); box-shadow: 0 0 0 35px color-mix(in srgb, var(--rose) 5%, transparent), 0 0 0 75px color-mix(in srgb, var(--rose) 4%, transparent); pointer-events: none; }
+.hero-inner, .section-inner, footer { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.eyebrow { color: var(--rose-deep); font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .19em; }
+h1 { max-width: 800px; font-size: clamp(3rem, 7.6vw, 6.4rem); line-height: .98; letter-spacing: -.065em; margin: 20px 0 24px; font-weight: 760; }
+.hero h1 em { font-style: normal; color: var(--rose); }
+.hero-copy { max-width: 720px; font-size: clamp(1.05rem, 2vw, 1.28rem); color: var(--muted); margin: 0; }
+.hero-copy strong { color: var(--ink); font-weight: 700; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.button { display: inline-flex; justify-content: center; align-items: center; gap: 9px; padding: 12px 18px; border-radius: 999px; border: 1px solid var(--rose); font-weight: 750; font-size: .9rem; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button.primary { background: var(--rose-deep); color: var(--pink-soft); }
+.button.secondary { color: var(--rose-deep); background: transparent; }
+.hero-meta { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 48px; color: var(--muted); font-size: .85rem; }
+.hero-meta span { display: flex; align-items: center; gap: 8px; }
+.hero-meta span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--rose); }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1100px; margin: -1px auto 0; padding: 0 28px; background: var(--paper); border-bottom: 1px solid var(--line); }
+.metric { padding: 26px 20px 28px; border-right: 1px solid var(--line); }
+.metric:first-child { padding-left: 0; }
+.metric:last-child { border-right: 0; }
+.metric strong { display: block; font-size: clamp(1.65rem, 3vw, 2.35rem); letter-spacing: -.05em; line-height: 1.15; }
+.metric span { color: var(--muted); font-size: .82rem; }
+section { padding: 86px 28px; }
+.section-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 36px; align-items: start; margin-bottom: 42px; }
+.kicker { color: var(--rose); text-transform: uppercase; letter-spacing: .18em; font-size: .74rem; font-weight: 800; padding-top: 10px; }
+h2 { font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.08; letter-spacing: -.05em; margin: 0; }
+.lead { color: var(--muted); max-width: 720px; margin: 18px 0 0; font-size: 1.02rem; }
+.about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; }
+.panel { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+.panel h3 { margin: 0 0 12px; font-size: 1.1rem; letter-spacing: -.02em; }
+.panel p { color: var(--muted); margin: 0; }
+.principles { display: grid; gap: 14px; margin-top: 22px; }
+.principle { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); font-size: .94rem; }
+.principle b { color: var(--ink); min-width: 112px; }
+.principle i { width: 7px; height: 7px; background: var(--rose); border-radius: 50%; margin-top: 9px; flex: 0 0 auto; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.tag { border: 1px solid var(--line); border-radius: 999px; padding: 7px 11px; color: var(--rose-deep); background: var(--pink-soft); font-size: .8rem; font-weight: 650; }
+.work { background: var(--paper); }
+.case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.case { border: 1px solid var(--line); border-radius: 20px; padding: 28px; background: var(--pink-soft); display: flex; flex-direction: column; min-height: 285px; }
+.case-top { display: flex; justify-content: space-between; gap: 14px; align-items: center; margin-bottom: 24px; }
+.case-num { font-size: .76rem; letter-spacing: .14em; color: var(--rose); font-weight: 800; }
+.case-type { font-size: .73rem; color: var(--muted); border: 1px solid var(--line); padding: 5px 9px; border-radius: 999px; }
+.case h3 { font-size: 1.35rem; line-height: 1.2; margin: 0 0 12px; letter-spacing: -.035em; }
+.case p { color: var(--muted); margin: 0 0 22px; font-size: .94rem; }
+.case-metric { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; gap: 10px; align-items: baseline; }
+.case-metric strong { font-size: 1.65rem; letter-spacing: -.05em; color: var(--rose-deep); }
+.case-metric span { color: var(--muted); font-size: .82rem; }
+.experience-list { border-top: 1px solid var(--line); }
+.experience { display: grid; grid-template-columns: 230px 1fr; gap: 38px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+.exp-date { color: var(--rose); font-size: .79rem; font-weight: 800; letter-spacing: .04em; }
+.exp-org { color: var(--muted); font-size: .88rem; margin-top: 6px; }
+.exp-content h3 { margin: 0 0 8px; font-size: 1.18rem; }
+.exp-content p { color: var(--muted); margin: 0 0 12px; }
+.exp-content ul { padding-left: 19px; margin: 0; color: var(--muted); }
+.exp-content li { margin: 6px 0; padding-left: 3px; }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.skill-card { padding: 23px; border: 1px solid var(--line); background: var(--paper); border-radius: 17px; }
+.skill-card .symbol { color: var(--rose); font-size: 1.35rem; margin-bottom: 16px; }
+.skill-card h3 { font-size: 1rem; margin: 0 0 10px; }
+.skill-card p { margin: 0; color: var(--muted); font-size: .88rem; }
+.timeline-note { border-left: 2px solid var(--rose); padding-left: 18px; margin-top: 25px; color: var(--muted); font-size: .9rem; }
+.contact { background: var(--pink); }
+.contact-card { border: 1px solid color-mix(in srgb, var(--rose) 35%, var(--line)); border-radius: 24px; padding: clamp(28px, 5vw, 54px); display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: end; }
+.contact-card h2 { max-width: 680px; }
+.contact-card p { max-width: 620px; color: var(--muted); margin: 18px 0 0; }
+.contact-actions { display: flex; flex-direction: column; gap: 10px; min-width: 180px; }
+footer { padding: 24px 28px 34px; color: var(--muted); font-size: .78rem; display: flex; justify-content: space-between; gap: 16px; }
+@media (max-width: 760px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  nav { padding: 13px 18px; }
+  .hero { padding: 68px 22px 58px; }
+  .hero::after { width: 230px; height: 230px; right: -120px; top: -70px; }
+  .metrics { grid-template-columns: repeat(2, 1fr); padding: 0 22px; }
+  .metric { padding: 20px 12px; border-bottom: 1px solid var(--line); }
+  .metric:nth-child(2) { border-right: 0; }
+  .metric:nth-child(3), .metric:nth-child(4) { border-bottom: 0; }
+  .metric:first-child { padding-left: 12px; }
+  section { padding: 62px 22px; }
+  .section-head, .about-grid, .case-grid, .contact-card { grid-template-columns: 1fr; gap: 22px; }
+  .section-head { margin-bottom: 28px; }
+  .experience { grid-template-columns: 1fr; gap: 10px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .contact-actions { flex-direction: row; flex-wrap: wrap; }
+  footer { padding-left: 22px; padding-right: 22px; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="nav-wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#top">Natasha <span>Agarwal</span></a>
+      <div class="nav-links">
+        <a href="#leadership">Leadership</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#expertise">Expertise</a>
+        <a class="nav-cta" href="#contact">Let’s connect ↗</a>
+      </div>
+    </nav>
+  </div>
+  <main id="top">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">AI Product Leadership · Enterprise Platforms · Product Builder</div>
+        <h1>Building AI products<br>people can <em>trust.</em></h1>
+        <p class="hero-copy">I’m <strong>Natasha Agarwal</strong>, a Senior AI Product Manager and hands-on product builder. I lead complex product work where AI system design, platform integrity, and human-centred delivery have to work together—especially when the stakes are high.</p>
+        <div class="hero-actions"><a class="button primary" href="#work">Explore selected work <span>↘</span></a><a class="button secondary" href="mailto:natasha.agarwal.254@gmail.com">Contact me <span>↗</span></a></div>
+        <div class="hero-meta"><span>12+ years across technology and product</span><span>B2B SaaS & enterprise platforms</span><span>Maharashtra, India</span></div>
+      </div>
+    </header>
+    <div class="metrics" aria-label="Selected impact metrics">
+      <div class="metric"><strong>90%+</strong><span>Invoice straight-through processing</span></div>
+      <div class="metric"><strong>~70%</strong><span>Reduction in data mismatches</span></div>
+      <div class="metric"><strong>100+</strong><span>Sites supported by AI telemetry work</span></div>
+      <div class="metric"><strong>$46.4M</strong><span>GMV commerce platform</span></div>
+    </div>
+    <section id="leadership">
+      <div class="section-inner">
+        <div class="section-head"><div class="kicker">01 / Leadership</div><div><h2>Clear direction.<br>Sound judgement. Real outcomes.</h2><p class="lead">I bring structure to ambiguity and connect product strategy with the technical and operational details that determine whether a product succeeds in production. My foundation spans engineering, systems analysis, product ownership, and end-to-end product management.</p></div></div>
+        <div class="about-grid">
+          <article class="panel"><h3>How I lead</h3><p>I work across discovery, strategy, product specifications, engineering alignment, delivery, launch readiness, and post-launch instrumentation. I’m comfortable challenging technical assumptions, making trade-offs explicit, and bringing stakeholders together around measurable outcomes.</p>
+            <div class="principles"><div class="principle"><i></i><b>Systems thinking</b><span>Understand the full journey, dependencies, data, and failure modes.</span></div><div class="principle"><i></i><b>Trust by design</b><span>Build in validation, governance, escalation, and recovery from the start.</span></div><div class="principle"><i></i><b>Outcome ownership</b><span>Connect decisions to customer experience, operational reliability, and business value.</span></div></div>
+          </article>
+          <aside class="panel"><h3>Leadership focus</h3><p>Product leadership at the intersection of intelligent systems and enterprise-grade reliability.</p><div class="tag-list"><span class="tag">AI product strategy</span><span class="tag">Agentic AI / LLMs</span><span class="tag">Human-in-the-loop</span><span class="tag">Platform integrity</span><span class="tag">Enterprise integrations</span><span class="tag">Product discovery</span><span class="tag">GTM & lifecycle</span><span class="tag">Metrics & instrumentation</span></div></aside>
+        </div>
+      </div>
+    </section>
+    <section class="work" id="work">
+      <div class="section-inner">
+        <div class="section-head"><div class="kicker">02 / Selected work</div><div><h2>Complex problems.<br>Measured impact.</h2><p class="lead">A selection of product initiatives across AI-enabled behavioural health, industrial commerce, and enterprise platform modernization.</p></div></div>
+        <div class="case-grid">
+          <article class="case"><div class="case-top"><span class="case-num">CASE 01</span><span class="case-type">AI · Behavioural health</span></div><h3>Designed an AI oversight layer for high-stakes care</h3><p>Designed multimodal oversight across voice, text, and video, with human-in-the-loop escalation, confidence thresholds, and governance guardrails for a platform where missed escalation could have clinical consequences.</p><div class="case-metric"><strong>HITL</strong><span>Escalation and oversight designed into the workflow</span></div></article>
+          <article class="case"><div class="case-top"><span class="case-num">CASE 02</span><span class="case-type">AI · Industrial operations</span></div><h3>Moved telemetry from reactive to predictive</h3><p>Shipped AI telemetry forecasting on live sensor streams to help teams anticipate equipment runout and improve operational continuity across distributed customer sites.</p><div class="case-metric"><strong>100+ sites</strong><span>Supported by telemetry forecasting</span></div></article>
+          <article class="case"><div class="case-top"><span class="case-num">CASE 03</span><span class="case-type">AI · Finance operations</span></div><h3>Automated invoice processing with controls</h3><p>Delivered AI invoice automation and defined validation logic and failure recovery with data science, keeping AI responsible for extraction while retaining checks around critical business decisions.</p><div class="case-metric"><strong>90%+</strong><span>Straight-through processing</span></div></article>
+          <article class="case"><div class="case-top"><span class="case-num">CASE 04</span><span class="case-type">Platform · Commerce</span></div><h3>Unified fragmented enterprise data flows</h3><p>Aligned Magento, Salesforce, and Dynamics 365 Business Central around a microservices source-of-truth model, while coordinating a zero-downtime migration of legacy customer, order, and invoice data.</p><div class="case-metric"><strong>~70%</strong><span>Fewer data mismatches; manual reconciliation eliminated</span></div></article>
+          <article class="case"><div class="case-top"><span class="case-num">CASE 05</span><span class="case-type">Platform · Multi-tenant SaaS</span></div><h3>Made customer onboarding faster to scale</h3><p>Re-architected fragmented micro-apps into a reusable multi-tenant platform, reducing repeated implementation work across a broad site footprint.</p><div class="case-metric"><strong>7 days → hours</strong><span>Customer onboarding time</span></div></article>
+          <article class="case"><div class="case-top"><span class="case-num">CASE 06</span><span class="case-type">Delivery · Enterprise change</span></div><h3>Led complex change without disrupting operations</h3><p>Owned discovery, specifications, delivery coordination, and cutover across engineering, QA, client IT, and operations for a high-volume commerce platform.</p><div class="case-metric"><strong>Zero disruption</strong><span>Go-live objective for critical platform changes</span></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <div class="section-inner">
+        <div class="section-head"><div class="kicker">03 / Experience</div><div><h2>A technical foundation.<br>A product leader’s lens.</h2><p class="lead">A career built by moving closer to the problem at every step: from software engineering and systems analysis to product ownership and AI product management.</p></div></div>
+        <div class="experience-list">
+          <article class="experience"><div><div class="exp-date">JUNE 2026 — PRESENT</div><div class="exp-org">Venture7 Technology Pvt. Ltd.</div></div><div class="exp-content"><h3>Senior AI Product Manager</h3><p>Product leadership across technical design validation, offering lifecycle, market and competitive insight, pricing, growth, and stakeholder relationships.</p></div></article>
+          <article class="experience"><div><div class="exp-date">JUNE 2024 — PRESENT</div><div class="exp-org">Venture7 Technology Pvt. Ltd. · Remote</div></div><div class="exp-content"><h3>Product Manager</h3><p>Owned AI product strategy and end-to-end delivery across two simultaneous B2B SaaS verticals: behavioural health and a $46.4M GMV commerce platform.</p><ul><li>Defined multimodal AI oversight, escalation logic, and governance guardrails.</li><li>Delivered AI telemetry forecasting and invoice automation with engineering and data science.</li><li>Led data migration, source-of-truth integration, and reusable multi-tenant platform work.</li><li>Drove 65% fewer invoice failures, 60% fewer transaction failures, and 35% improvement in order efficiency, as stated in the profile.</li></ul></div></article>
+          <article class="experience"><div><div class="exp-date">JUNE 2023 — JUNE 2024</div><div class="exp-org">Venture7 Technology Pvt. Ltd.</div></div><div class="exp-content"><h3>Senior Business Analyst / Product Owner</h3><p>Owned product scope, releases, risks, and stakeholder expectations for a Magento-based SaaS commerce platform.</p><ul><li>Led root-cause analysis and structural fixes associated with an approximately 80% reduction in production defects.</li><li>Owned delivery of a $2M promotions and pricing programme, coordinating up to 14 contributors.</li><li>Supported go-to-market strategy, customer onboarding, and roadmap discovery.</li></ul></div></article>
+          <article class="experience"><div><div class="exp-date">JUNE 2022 — JUNE 2023</div><div class="exp-org">Venture7 Technology Pvt. Ltd. · Remote</div></div><div class="exp-content"><h3>Business Analyst</h3><p>Supported discovery and requirements for a digital healthcare and wellness platform generating approximately $20M in annual revenue.</p><ul><li>Contributed to feature expansion that drove a 23% increase in incremental user engagement.</li><li>Coordinated an eight-person cross-functional pod across engineering, QA, UX, and content.</li></ul></div></article>
+          <article class="experience"><div><div class="exp-date">FEB 2012 — AUG 2015</div><div class="exp-org">Fiserv</div></div><div class="exp-content"><h3>System Analyst</h3><p>Contributed to Secure Lending, a paper-free loan origination platform used by 25+ lenders and approximately 5,500 closing companies.</p><ul><li>Helped accelerate delivery timelines by 20% through Agile adoption and global team coordination.</li><li>Supported process improvements, client requirements, and high-reliability lending workflows.</li></ul></div></article>
+          <article class="experience"><div><div class="exp-date">JULY 2008 — FEB 2012</div><div class="exp-org">Tata Consultancy Services</div></div><div class="exp-content"><h3>System Engineer</h3><p>Built a foundation in secure, high-availability banking systems and reusable software components.</p><ul><li>Helped standardize internet banking authentication across three brands and five digital channels.</li><li>Focused on modularity, maintainability, documentation, and defect prevention.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="expertise" class="work">
+      <div class="section-inner">
+        <div class="section-head"><div class="kicker">04 / Expertise</div><div><h2>Fluent across product,<br>technology, and execution.</h2><p class="lead">A hands-on approach that helps me move from a customer or business problem to a product decision, a validated solution, and an outcome that can be measured.</p></div></div>
+        <div class="skills-grid">
+          <article class="skill-card"><div class="symbol">↗</div><h3>Product strategy & discovery</h3><p>Roadmaps, user interviews, problem framing, requirements, prioritization, product specifications, GTM, pricing, and lifecycle management.</p></article>
+          <article class="skill-card"><div class="symbol">✳</div><h3>AI systems & responsible delivery</h3><p>Agentic AI and LLM systems, multimodal workflows, confidence thresholds, human-in-the-loop design, validation, governance, and failure recovery.</p></article>
+          <article class="skill-card"><div class="symbol">⌘</div><h3>Platforms & integrations</h3><p>B2B SaaS, multi-tenant platforms, APIs, microservices, commerce systems, payment flows, data pipelines, and enterprise integrations.</p></article>
+          <article class="skill-card"><div class="symbol">◎</div><h3>Analytics & outcomes</h3><p>SQL, Mixpanel, Power BI, funnel analysis, instrumentation, operational metrics, and post-launch outcome tracking.</p></article>
+          <article class="skill-card"><div class="symbol">⌁</div><h3>Prototyping & collaboration</h3><p>Claude, ChatGPT, Figma, Lovable, Cursor, Miro, FigJam, Jira, Confluence, and Azure DevOps.</p></article>
+          <article class="skill-card"><div class="symbol">◈</div><h3>Delivery & stakeholder leadership</h3><p>Engineering and architecture alignment, cross-functional planning, risk management, release coordination, cutover, and stakeholder communication.</p></article>
+        </div>
+        <div class="timeline-note"><strong>Education & credentials:</strong> B.Tech, College of Technology, G.B. Pant University of Agriculture & Technology (2004–2008). Certifications listed in the profile include PMP®, PSPO™, Artificial Intelligence Micro-Certification (AIC), and Agile / Scrum learning credentials.</div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <div class="contact-card"><div><div class="eyebrow">Let’s build what matters</div><h2>Have a consequential AI product problem to solve?</h2><p>I’m interested in conversations about AI products that need to work reliably in the real world: across people, platforms, and complex enterprise environments.</p></div><div class="contact-actions"><a class="button primary" href="mailto:natasha.agarwal.254@gmail.com">Email Natasha ↗</a><a class="button secondary" href="https://www.linkedin.com/in/natasha1agarwal" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div></div>
+      </div>
+    </section>
+  </main>
+  <footer><span>© <span id="year">2026</span> Natasha Agarwal</span><span>AI Product Leadership · Built around trust, clarity, and measurable outcomes.</span></footer>
+</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
